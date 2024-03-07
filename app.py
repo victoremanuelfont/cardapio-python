@@ -6,6 +6,11 @@ print('3. Cadastrar Restaurante')
 print('4. Sair')
 
 
+opcao = int(input('Escolha uma opção: '))
+print('Voce escolheu a opção', opcao)
+
+
+
 
 
 
