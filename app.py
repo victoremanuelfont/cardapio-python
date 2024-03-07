@@ -1,3 +1,5 @@
+import os
+
 print("""
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
 ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
@@ -8,12 +10,9 @@ print("""
 """)
 
 def finalizar_app():
+    os.system('cls')
     print('Encerrando o programa')
     
-
-
-
-
 print('1. Cadastrar Restaurante')
 print('2. Listar Restaurante')
 print('3. Cadastrar Restaurante')
