@@ -7,6 +7,13 @@ print("""
 ╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░  
 """)
 
+def finalizar_app():
+    print('Encerrando o programa')
+    
+
+
+
+
 print('1. Cadastrar Restaurante')
 print('2. Listar Restaurante')
 print('3. Cadastrar Restaurante')
@@ -14,7 +21,6 @@ print('4. Sair')
 
 
 opcao = int(input('Escolha uma opção: '))
-#print('Voce escolheu a opção', opcao)
 print(f'Você escolheu a opção {opcao}')
 
 
@@ -25,7 +31,9 @@ elif opcao == 2:
 elif opcao == 3:
     print('3. Cadastrar Restaurante')
 else:
-    print('4. Sair')
+    finalizar_app()
+
+
     
 
 
