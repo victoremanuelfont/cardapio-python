@@ -1,5 +1,7 @@
 import os
 
+restaurantes = []
+
 
 def exibir_nome_do_programa():  
     print("""
@@ -27,8 +29,14 @@ def opcao_invalida():
     input('Digite uma tecla para voltar ao menu principal: ')
     main()
 
-
-
+def cadastrar_nome_restaurante():
+    os.system('cls')
+    print('Cadastro de novos restaurantes\n')
+    nome_restaurante = input('Digite o nome do Restaurante: ')
+    restaurantes.append(nome_restaurante)
+    print(f'O restaurante {nome_restaurante} foi cadastrado!!')
+    input('Digite qualquer tecla para voltar ao menu inicial')
+    main()
 
 
 def escolher_opcao():
@@ -38,7 +46,7 @@ def escolher_opcao():
 
 
         if opcao == 1:
-            print('1. Cadastrar Restaurante')
+            cadastrar_nome_restaurante()
         elif opcao == 2:
             print('2. Listar Restaurante')
         elif opcao == 3:
