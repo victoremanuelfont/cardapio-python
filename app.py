@@ -1,6 +1,8 @@
 import os
 
-restaurantes = ['Fogão a Lenha','Freguesão', 'Drinks Bar']
+restaurantes = [{'nome':'Fogão a Lenha', 'categoria':'churrasco', 'ativo': False},
+                {'nome':'Drinks Bar', 'categoria':'noite', 'ativo': True},
+                {'nome':'Rancho do Serjão', 'categoria':'dia', 'ativo': True}]
 
 
 def exibir_nome_do_programa():  
@@ -25,7 +27,6 @@ def exibir_subtitulo(texto):
     os.system('cls')
     print(texto)
 
-
 def exibir_opcoes():
     print('1. Cadastrar Restaurante')
     print('2. Listar Restaurante')
@@ -47,11 +48,12 @@ def listar_restaurantes():
     exibir_subtitulo('Listando os restaurantes \n')
 
     for restaurante in restaurantes:  #para cada restaurante na lista restaurantes
-        print(f'.{restaurante}')
+        nome_restaurante = restaurante['nome']
+        categoria = restaurante['categoria']
+        ativo = restaurante['ativo']
+        print(f'-{nome_restaurante} | {categoria} | {ativo}')
 
     voltar_ao_menu_principal()
-
-
 
 def escolher_opcao():
     try:
@@ -72,13 +74,11 @@ def escolher_opcao():
     except:
         opcao_invalida()
 
-
 def main():
     os.system('cls')
     exibir_nome_do_programa()
     exibir_opcoes()
     escolher_opcao()
-
 
 if __name__ == '__main__':
     main()
